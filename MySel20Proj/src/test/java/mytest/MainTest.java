@@ -27,7 +27,7 @@ public class MainTest {
   //  	System.setProperty("webdriver.chrome.driver", "/Users/gtanzi/chromedriver");
     	
         //WebDriver driver = new FirefoxDriver();
-		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://selenium-hub.apps.gtanzi.local/wd/hub"), DesiredCapabilities.chrome());
+		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://selenium-hub.apps.gtanzi.local/wd/hub"), DesiredCapabilities.firefox());
         //		
 		// And now use this to visit Google
         driver.get("http://www.google.com");
