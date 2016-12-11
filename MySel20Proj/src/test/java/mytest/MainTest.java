@@ -15,8 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MainTest {
 	@Test
 	    public void executeChrome() throws Exception {
-		System.out.println( "Executing tests...");
-	        this.execute(DesiredCapabilities.chrome());
+		System.out.println( "Executing firefox tests...");
+	        this.execute(DesiredCapabilities.firefox());
 	    }
 
 	
@@ -26,7 +26,7 @@ public class MainTest {
 		//System.setProperty("webdriver.gecko.driver", "/Users/gtanzi/geckodriver");
     	//System.setProperty("webdriver.chrome.driver", "/Users/gtanzi/chromedriver");
     	
-     //   WebDriver driver = new FirefoxDriver();
+        //WebDriver driver = new FirefoxDriver();
 		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://selenium-hub-jenkins-cluster.apps.gtanzi.local/wd/hub"), DesiredCapabilities.firefox());
         //		
 		// And now use this to visit Google
@@ -44,18 +44,17 @@ public class MainTest {
         element.submit();
 
         // Check the title of the page
-        System.out.println("Page title is: " + driver.getTitle());
+        System.out.println("Page title is now: " + driver.getTitle());
         
         // Google's search is rendered dynamically with JavaScript.
         // Wait for the page to load, timeout after 10 seconds
-        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+/*        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 return d.getTitle().toLowerCase().startsWith("cheese!");
             }
         });
-
+*/
         // Should see: "cheese! - Google Search"
-        System.out.println( "Page title is: " + driver.getTitle());
         driver.navigate().to("http://www.github.com");
         System.out.println( driver.getTitle() );
         assert( driver.getTitle() != "test" );
