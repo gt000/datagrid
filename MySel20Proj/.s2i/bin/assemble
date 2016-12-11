@@ -88,6 +88,7 @@ clear_maven_repository() {
 
 # . $(dirname $0)/common
 
+
 # we will move any code provided by s2i to here
 LOCAL_SOURCE_DIR=${HOME}/source
 
