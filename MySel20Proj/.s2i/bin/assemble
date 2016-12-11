@@ -128,7 +128,7 @@ manage_incremental_build
 if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   pushd $LOCAL_SOURCE_DIR &> /dev/null
 
-  MAVEN_ARGS=${MAVEN_ARGS--e -Popenshift -Dcom.redhat.xpaas.repo.redhatga package}
+  MAVEN_ARGS=${MAVEN_ARGS--e -Popenshift -Dcom.redhat.xpaas.repo.redhatga test package}
 
   # Always force IPv4 (CLOUD-188)
   # Append user-supplied arguments (CLOUD-412)
