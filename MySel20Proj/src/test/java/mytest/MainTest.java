@@ -23,11 +23,11 @@ public class MainTest {
     private void execute(final DesiredCapabilities capability) throws Exception {       // Create a new instance of the Firefox driver
         // Notice that the remainder of the code relies on the interface, 
         // not the implementation.
-		System.setProperty("webdriver.gecko.driver", "/Users/gtanzi/geckodriver");
+	//	System.setProperty("webdriver.gecko.driver", "/Users/gtanzi/geckodriver");
   //  	System.setProperty("webdriver.chrome.driver", "/Users/gtanzi/chromedriver");
     	
         //WebDriver driver = new FirefoxDriver();
-		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://selenium-hub-jenkins-cluster.apps.gtanzi.local/wd/hub"), DesiredCapabilities.firefox());
         //		
 		// And now use this to visit Google
         driver.get("http://www.google.com");
