@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Custom assemble......."
 . $(dirname $0)/common.sh
 
 # we will move any code provided by s2i to here
