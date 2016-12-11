@@ -139,6 +139,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   echo "Using $(mvn --version)"
 
   # Execute the actual build
+  mvn test
   mvn $MAVEN_ARGS
 
   ERR=$?
