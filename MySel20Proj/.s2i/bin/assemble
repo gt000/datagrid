@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "Custom assemble......."
+ls .
+pwd
 . $(dirname $0)/common.sh
 
 # we will move any code provided by s2i to here
