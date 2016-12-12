@@ -1,6 +1,5 @@
 package mytest;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 
 
@@ -27,7 +27,7 @@ public class MainTest {
     	//System.setProperty("webdriver.chrome.driver", "/Users/gtanzi/chromedriver");
     	
         //WebDriver driver = new FirefoxDriver();
-		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://selenium-hub-jenkins-cluster.apps.gtanzi.local/wd/hub"), DesiredCapabilities.firefox());
+		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://jenkins-jenkins-cluster.apps.gtanzi.local/wd/hub"), DesiredCapabilities.firefox());
         //		
 		// And now use this to visit Google
         driver.get("http://www.google.com");
@@ -56,7 +56,7 @@ public class MainTest {
 */
         // Should see: "cheese! - Google Search"
         driver.navigate().to("http://www.github.com");
-        System.out.println( driver.getTitle() );
+        System.out.println( driver.getCurrentUrl() );
         assert( driver.getTitle() != "test" );
     /*    java.util.List<WebElement> elements = driver.findElements(By.className("header-search-scope"));
         System.out.println( elements.size()); */

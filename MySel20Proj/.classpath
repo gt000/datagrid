@@ -51,5 +51,6 @@
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/jetty-repacked/9.2.13.v20160825/jetty-repacked-9.2.13.v20160825.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/htmlunit-driver/2.23/htmlunit-driver-2.23.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.15/snakeyaml-1.15.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
