@@ -25,9 +25,8 @@ public class MainTest {
         // not the implementation.
 		//System.setProperty("webdriver.gecko.driver", "/Users/gtanzi/geckodriver");
     	//System.setProperty("webdriver.chrome.driver", "/Users/gtanzi/chromedriver");
-    	
         //WebDriver driver = new FirefoxDriver();
-		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://jenkins:4444/wd/hub"), DesiredCapabilities.chrome());
+		WebDriver driver = new RemoteWebDriver(new java.net.URL("http://jenkins-selenium.apps.gtanzi.local/wd/hub"), DesiredCapabilities.chrome());
         //		
 		// And now use this to visit Google
         driver.get("http://www.google.com");
