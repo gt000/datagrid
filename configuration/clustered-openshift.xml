@@ -126,7 +126,15 @@
         <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
             <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"/>
         </subsystem>
-        <subsystem xmlns="urn:infinispan:server:endpoint:6.1">            <hotrod-connector cache-container="clustered" socket-binding="hotrod-internal" name="hotrod-internal">             </hotrod-connector>            <hotrod-connector cache-container="clustered" socket-binding="hotrod-external" name="hotrod-external">              <topology-state-transfer external-host="172.30.186.173" external-port="11444"/>              </hotrod-connector>             <memcached-connector cache-container="clustered" cache="default" socket-binding="memcached"/>             <rest-connector cache-container="clustered" />        </subsystem>
+        <subsystem xmlns="urn:infinispan:server:endpoint:6.1">            
+           <hotrod-connector cache-container="clustered" socket-binding="hotrod-internal" name="hotrod-internal">             
+           </hotrod-connector>            
+           <hotrod-connector cache-container="clustered" socket-binding="hotrod-external" name="hotrod-external">
+                      <topology-state-transfer external-host="172.30.186.173" external-port="11333"/>
+           </hotrod-connector>             
+           <memcached-connector cache-container="clustered" cache="default" socket-binding="memcached"/>             
+           <rest-connector cache-container="clustered" />        
+         </subsystem>
         <subsystem xmlns="urn:infinispan:server:core:6.3" default-cache-container="clustered">            <cache-container name="clustered" default-cache="carcache"  >                <transport/>                 <distributed-cache name="carcache" mode="SYNC"         >                     </distributed-cache>             </cache-container>            <cache-container name="security"/>        </subsystem>
         <subsystem xmlns="urn:jboss:domain:jca:1.1">
             <archive-validation enabled="true" fail-on-error="true" fail-on-warn="false"/>
